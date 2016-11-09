@@ -5,6 +5,7 @@
         <div class="form-group text-center">
           <img data-ng-src="{{imageURL}}" alt="{{user.displayName}}" class="img-thumbnail user-profile-picture">
         </div>
+        <p>{{imageURL}}</p>
         <div class="text-center form-group" data-ng-hide="uploader.queue.length">
           <span class="btn btn-default btn-file">
               Select Image <input type="file" nv-file-select uploader="uploader">
