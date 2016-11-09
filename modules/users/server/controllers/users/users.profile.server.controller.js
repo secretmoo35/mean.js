@@ -56,13 +56,13 @@ exports.changeProfilePicture = function (req, res) {
   var message = null;
 
   if (user) {
-    fs.writeFile('./users/img/profile/uploads/' + req.files.file.name, req.files.file.buffer, function (uploadError) {
+    fs.writeFile('./uploads/' + req.files.file.name, req.files.file.buffer, function (uploadError) {
       if (uploadError) {
         return res.status(400).send({
           message: 'Error occurred while uploading profile picture'
         });
       } else {
-        user.profileImageURL = 'users/img/profile/uploads/' + req.files.file.name;
+        user.profileImageURL = 'uploads/' + req.files.file.name;
 
         user.save(function (saveError) {
           if (saveError) {
