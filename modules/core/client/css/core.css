@@ -1,5 +1,5 @@
 
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+/*@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 .content {
@@ -42,6 +42,7 @@ a:hover .header-profile-image {
 .navbar-custom {
   background-color: #069add;
   border-color: #069add;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .navbar-custom .navbar-brand {
   color: #ffffff;
@@ -301,8 +302,11 @@ button:focus {
   color: #000;
 }
 /* Material Design Buttons*/
-
-
+/* box-shadow*/
+.box-shadow{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* box-shadow*/
 body {padding-top:50px;}
 
 .box {
