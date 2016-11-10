@@ -1,6 +1,4 @@
 <section class="row" data-ng-controller="AuthenticationController">
-  
-  <div ui-view></div>
   <h3 class="col-md-12 text-center">Using social accounts</h3>
   <div class="col-md-12 text-center">
     <img class="social-account" ng-click="callOauthProvider('/api/auth/facebook')" ng-src="/modules/users/img/buttons/facebook.png">
@@ -10,4 +8,5 @@
     <img class="social-account" ng-click="callOauthProvider('/api/auth/github')" ng-src="/modules/users/img/buttons/github.png">
     <img class="social-account" ng-click="callOauthProvider('/api/auth/paypal')"  ng-src="/modules/users/img/buttons/paypal.png">
   </div>
+   <div ui-view></div>
 </section>
