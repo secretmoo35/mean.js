@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
     </button>-->
     <a data-ui-sref="home" class="navbar-brand">MEAN.JS</a>
-    <ul class="nav navbar-nav navbar-right user-navber" data-ng-hide="authentication.user">
+    <!--<ul class="nav navbar-nav navbar-right user-navber" data-ng-hide="authentication.user">
       <li data-ui-sref-active="active">
         <a data-ui-sref="authentication.signup">Sign Up</a>
       </li>
@@ -15,15 +15,16 @@
       <li data-ui-sref-active="active">
         <a data-ui-sref="authentication.signin">Sign In</a>
       </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right user-navber" data-ng-show="authentication.user">
-      <li class="dropdown" dropdown>
+    </ul>-->
+    <ul class="nav navbar-right user-navber" data-ng-show="authentication.user" for="off_canvas">
+      <li class="dropdown"  dropdown data-ui-sref="settings.profile">
         <a class="dropdown-toggle user-header-dropdown-toggle" dropdown-toggle role="button">
           <img data-ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image"
           />
-          <span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+          <span for="off_canvas" class="fff" data-ng-bind="authentication.user.displayName"></span>
+          <!--<b class="caret"></b>-->
         </a>
-        <ul class="dropdown-menu" role="menu">
+        <!--<ul class="dropdown-menu" role="menu">
           <li data-ui-sref-active="active">
             <a data-ui-sref="settings.profile">Edit Profile</a>
           </li>
@@ -39,7 +40,7 @@
           <li>
             <a href="/api/auth/signout" target="_self">Signout</a>
           </li>
-        </ul>
+        </ul>-->
       </li>
     </ul>
   </div>

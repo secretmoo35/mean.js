@@ -33,33 +33,36 @@
   <link href="{{url}}{{favicon}}" rel="shortcut icon" type="image/x-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
   <!-- Application CSS Files -->
+  
   <!--<link href="{{url}}modules/core/css/circle-menu.css" rel="stylesheet">
   <script src="{{url}}modules/core/controllers/circleMenu.js"></script>-->
   {% for cssFile in cssFiles %}
   <link rel="stylesheet" href="{{cssFile}}">{% endfor %}
+
 </head>
 
 <body class="ng-cloak">
   <header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-custom"></header>
   <section class="content">
     <section class="container">
-        {% block content %}{% endblock %}
-        <span class="nav__button" data-ng-controller="HomeController" data-ng-init="loadMenu()" data-ng-show="authentication.user"><i class="licon-reorder"></i></span>
-        <nav class="navigation">
-          <p class="menu-header">Menu</p>
-          <a href="#">Facebook</a>
-          <a href="#">Google Plus</a>
-          <a href="#">Twitter</a>
-          <a href="#">Github</a>
-          <a href="#">Instagram</a>
-        </nav>
+      {% block content %}{% endblock %}
+      <div id="snav" class="en">
+  <ul>
+    <li> <a href="#"> <i class="fa fa-home"></i> <span>Home</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-css3"></i> <span>CSS3</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-html5"></i> <span>HTML5</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-git"></i> <span>Git</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-android"></i> <span>Android</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-apple"></i> <span>Apple</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-bitcoin"></i> <span>Bitcoin</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-facebook"></i> <span>Facebook</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-twitter"></i> <span>Twitter</span> </a> </li>
+    <li> <a href="#"> <i class="fa fa-google"></i> <span>Google</span> </a> </li>
+  </ul>
+</div>
     </section>
   </section>
-  <!--circle menu-->
-  <!--<div data-ng-include="'/modules/core/views/circle-menu.client.view.html'"></div>-->
-  <!--<div data-ng-include="'/modules/core/views/menu-box.client.view.html'"></div>-->
-  <!--<div data-ng-include="'/modules/core/views/menu-box.client.view.html'"></div>-->
-
+  
   <!--Embedding The User Object-->
   <script type="text/javascript">
     var user = {{ user | json | safe }};
