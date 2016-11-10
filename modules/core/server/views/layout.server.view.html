@@ -35,7 +35,7 @@
   <!-- Application CSS Files -->
   <!--<link href="{{url}}modules/core/css/circle-menu.css" rel="stylesheet">
   <script src="{{url}}modules/core/controllers/circleMenu.js"></script>-->
-   {% for cssFile in cssFiles %}
+  {% for cssFile in cssFiles %}
   <link rel="stylesheet" href="{{cssFile}}">{% endfor %}
 </head>
 
@@ -43,12 +43,23 @@
   <header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-custom"></header>
   <section class="content">
     <section class="container">
-      {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
+        <span class="nav__button" data-ng-controller="HomeController" data-ng-init="loadMenu()" data-ng-show="authentication.user"><i class="licon-reorder"></i></span>
+        <nav class="navigation">
+          <p class="menu-header">My Navigation:</p>
+          <a href="#">Facebook</a>
+          <a href="#">Google Plus</a>
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+          <a href="#">Instagram</a>
+        </nav>
     </section>
   </section>
   <!--circle menu-->
   <!--<div data-ng-include="'/modules/core/views/circle-menu.client.view.html'"></div>-->
-  <div data-ng-include="'/modules/core/views/menu-box.client.view.html'"></div>
+  <!--<div data-ng-include="'/modules/core/views/menu-box.client.view.html'"></div>-->
+  <!--<div data-ng-include="'/modules/core/views/menu-box.client.view.html'"></div>-->
+
   <!--Embedding The User Object-->
   <script type="text/javascript">
     var user = {{ user | json | safe }};
