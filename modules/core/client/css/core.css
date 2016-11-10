@@ -356,3 +356,137 @@ body {padding-top:50px;}
     color: #fff;
     transition: all 0.5s ease 0s;
 }
+
+/*menu box*/
+.drawer {
+  width: 9%;
+  margin-top: 15%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  /*height: 50%;*/
+  padding: .4em 0;
+  background: #0288d1;
+  color: white;
+  text-align: center;
+  font-size: 0;
+}
+
+.drawer li {
+  pointer-events: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  line-height: 100%;
+  transform: translateZ(0);
+}
+
+.drawer a {
+  pointer-events: auto;
+  position: relative;
+  display: block;
+  /*min-width: 5em;*/
+  margin-bottom: .4em;
+  padding: .4em;
+  line-height: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+
+.drawer a:active,
+.drawer a:focus { background: #4abde8; }
+
+.drawer i {
+  display: block;
+  margin-bottom: .2em;
+  font-size: 2em;
+}
+
+.drawer span {
+  font-size: .625em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.drawer li:hover ul {
+  transform: translateX(0);
+  background: #4abde8;/* Enable this if you wish to replicate hoverIntent */
+}
+
+.drawer > li { display: block;}
+
+.drawer > li > a { background: #0288d1; }
+
+.drawer > li:hover { z-index: 100; }
+
+.drawer > li:hover a { background: #4abde8; }
+
+.drawer > li a:hover { background: #4abde8; }
+
+.drawer > li > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 4px;
+  opacity: 0;
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=1 );
+  transition: opacity 0.5s;
+}
+
+.drawer > li:hover a:after { opacity: 1; }
+
+.drawer > li ul {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: auto;
+  white-space: nowrap;
+  transform: translateX(-100%);
+  background: #4abde8;
+  transition: 0.5s transform;
+}
+
+@media (min-height: 480px) and (min-width: 480px) {
+.drawer {
+  /*width: 7%;*/
+  margin-top: 15%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  /*height: 50%;*/
+  padding: .4em 0;
+  background: #0288d1;
+  color: white;
+  text-align: center;
+  font-size: 0;
+}
+.drawer a {
+  pointer-events: auto;
+  position: relative;
+  display: block;
+  /*min-width: 5em;*/
+  margin-bottom: .4em;
+  padding: .4em;
+  line-height: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+}
+/*menu box*/
