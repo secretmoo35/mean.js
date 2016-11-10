@@ -46,15 +46,13 @@
   <section class="content">
     <section class="container">
       {% block content %}{% endblock %}
-      <div data-ng-controller="HomeController">
+      <div data-ng-controller="HomeController" data-ng-show="authentication.user">
         <span class="nav__button"><i class="licon-reorder"></i></span>
         <nav class="navigation">
           <p class="menu-header"></p>
           <a data-ui-sref="chat">Chat</a>
-          <a href="#">Google Plus</a>
-          <a href="#">Twitter</a>
-          <a href="#">Github</a>
-          <a href="#">Instagram</a>
+          <a data-ui-sref="secrets.list">Secrets</a>
+          <a href="/api/auth/signout" target="_self">Sign Out</a>
         </nav>
       </div>
     </section>

@@ -1,23 +1,24 @@
 <section data-ng-controller="HomeController">
-  <div class="jumbotron text-center">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-        <img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/img/brand/logo.png" />
+  <div data-ng-show="authentication.user">
+    <div class="jumbotron text-center">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+          <img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/img/brand/logo.png" />
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <p class="lead">
+          Open-Source Full-Stack Solution For MEAN Applications
+        </p>
+      </div>
+      <div class="row">
+        <p>
+          <a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more</a>
+        </p>
       </div>
     </div>
-    <br>
-    <div class="row">
-      <p class="lead">
-        Open-Source Full-Stack Solution For MEAN Applications
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more</a>
-      </p>
-    </div>
-  </div>
-<!--<center>
+    <!--<center>
     <button class="btn btn-lg btn-default">Default</button>
     <button class="btn btn-lg btn-secondary">Secondary</button>
     <button class="btn btn-lg btn-primary">Primary</button>
@@ -26,38 +27,43 @@
     <button class="btn btn-lg btn-danger">Danger</button>
     <button class="btn btn-lg btn-success">Success</button>
     <button class="btn btn-lg btn-link">Link</button>
-  </center>-->
-</section>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      <div class="box">
-        <div class="box-icon">
-          <span class="fa fa-4x fa-html5"></span>
+    </center>-->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="box">
+            <div class="box-icon">
+              <span class="fa fa-4x fa-html5"></span>
+            </div>
+            <div class="info">
+              <h4 class="text-center">Title</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis
+                at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas
+                aperiam debitis dolor soluta!</p>
+              <a href="" class="btn">Link</a>
+            </div>
+          </div>
         </div>
-        <div class="info">
-          <h4 class="text-center">Title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo
-            nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis
-            dolor soluta!</p>
-          <a href="" class="btn">Link</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      <div class="box">
-        <div class="box-icon">
-          <span class="fa fa-4x fa-css3"></span>
-        </div>
-        <div class="info">
-          <h4 class="text-center">Title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo
-            nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis
-            dolor soluta!</p>
-          <a href="" class="btn">Link</a>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="box">
+            <div class="box-icon">
+              <span class="fa fa-4x fa-css3"></span>
+            </div>
+            <div class="info">
+              <h4 class="text-center">Title</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis
+                at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas
+                aperiam debitis dolor soluta!</p>
+              <a href="" class="btn">Link</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <div data-ng-show="!authentication.user">
+    <div data-ng-include="'/modules/users/views/authentication/authentication.client.view.html'"></div>
+    <div data-ng-include="'/modules/users/views/authentication/signin.client.view.html'"></div>
+  </div>
+</section>
