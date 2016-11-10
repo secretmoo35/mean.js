@@ -160,7 +160,13 @@ a:hover .header-profile-image {
 
 /* navbar-custom */
 /* dropdown-menu-custom */
-@media (min-height: 480px) and (min-width: 480px) {
+@media (max-width: 767px){
+.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+    color: #fff;
+}
+}
+
 .dropdown-menu > li > a {
     display: block;
     padding: 3px 20px;
@@ -168,16 +174,6 @@ a:hover .header-profile-image {
     font-weight: normal;
     line-height: 1.42857143;
     color: #000;
-    white-space: nowrap;
-}
-}
-.dropdown-menu > li > a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
-    color: #fff;
     white-space: nowrap;
 }
 .dropdown .dropdown-menu {
@@ -382,7 +378,7 @@ body {padding-top:50px;}
 
 /*menu box*/
 .drawer {
-  width: 9%;
+  width: 10%;
   margin-top: 15%;
   position: fixed;
   z-index: 10;
@@ -485,7 +481,7 @@ body {padding-top:50px;}
 
 @media (min-height: 480px) and (min-width: 480px) {
 .drawer {
-  /*width: 7%;*/
+  width: 5%;
   margin-top: 15%;
   position: fixed;
   z-index: 10;
