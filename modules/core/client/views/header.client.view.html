@@ -2,13 +2,13 @@
   <div class="navbar-header">
     <a data-ui-sref="home" class="navbar-brand">MEAN.JS</a>
     <ul class="nav navbar-right user-navber" data-ng-show="authentication.user" for="off_canvas">
-      <li class="dropdown"  dropdown data-ui-sref="settings.profile">
-        <a class="dropdown-toggle user-header-dropdown-toggle" dropdown-toggle role="button">
+      <li class="dropdown"  dropdown>
+        <p class="dropdown-toggle user-header-dropdown-toggle" dropdown-toggle role="button">
           <img data-ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image"
           />
           <span for="off_canvas" class="fff" data-ng-bind="authentication.user.displayName"></span>
 
-        </a>
+        </p>
       </li>
     </ul>
   </div>

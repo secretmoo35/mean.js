@@ -628,3 +628,6 @@ body{
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
+p {
+    margin: 0 10px 10px;
+}
